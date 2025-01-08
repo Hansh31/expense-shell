@@ -42,7 +42,7 @@ VALIDATE $? "Enabling mysql server"
 systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "starting mysql server"
 
-mysql -h mysql.hansh123.online -u root -pExpenseApp@1 -e 'show databases;' 
+mysql -h mysql.hansh123.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then 
